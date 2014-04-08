@@ -1,0 +1,2 @@
+name, email, git username
+Garrett Sand, garrettsand@gmail.com, vnmnd
