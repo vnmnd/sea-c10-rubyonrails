@@ -1,2 +1,4 @@
-name, email, git username
+name, email, github
+Renée Hendricksen, renee@nird.us, reneedv
+Matthew Viens, Matthew.J.Viens@gmail.com, MatthewViens
 Garrett Sand, garrettsand@gmail.com, vnmnd
