@@ -3,10 +3,10 @@ class Calculator
     total = 0
 
     content.each do |number|
-      total += number 
+      total += number
     end
 
-    total 
+    total
   end
 
   def multiply(*numbers)
