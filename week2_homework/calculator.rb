@@ -9,14 +9,6 @@ class Calculator
     total 
   end
 
-  def multiply(x, y = nil)
-    if x.is_a?(Array)
-      x[0] * x[1]
-    else
-      x * y
-    end
-  end
-
   def multiply(*numbers)
     numbers = numbers.flatten
     numbers[0] * numbers[1]
