@@ -13,11 +13,11 @@ describe Calculator do
     end
 
     it "computes the sum of an array of two numbers" do
-      calculator.sum([7,11]).should == 18
+      calculator.sum([7, 11]).should == 18
     end
 
     it "computes the sum of an array of many numbers" do
-      calculator.sum([1,3,5,7,9]).should == 25
+      calculator.sum([1, 3, 5, 7, 9]).should == 25
     end
   end
 
