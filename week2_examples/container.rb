@@ -1,4 +1,8 @@
+require_relative 'db_adapter'
+
 class Container
+  include DbAdapter
+
   DONT_CHANGE_ME = "I'm not supposed to change"
   # Refactor 2
   attr_accessor :volume, :color, :name, :contents

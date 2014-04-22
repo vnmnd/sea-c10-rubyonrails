@@ -1,20 +1,11 @@
 class Calculator
 
   def sum numbers
-    total = 0
-    numbers.each do |i|
-      total += i
-    end
-    total
+    numbers.inject(0, :+)
   end
 
   def multiply *numbers
-    total = 1
-    numbers.reject{|i| i.kind_of? String}
-    numbers.flatten.each do |i|
-      total *= i if i.respond_to? '*'
-    end
-    total
+    numbers.flatten.inject(:*)
   end
 
   def pow base, exp
@@ -22,6 +13,16 @@ class Calculator
     multiply Array.new(exp, base)
   end
 
-
-
+  def fac n
+    return 1 if n.zero?
+    n.downto(1).inject(:*)
+    # n * fac(n-1)
+    # 5 * 4 * 3 * 2 * 1 * 1
+    # 4 * 3 * 2 * 1 * 1
+    # 3 * 2 * 1 * 1
+    # 2 * 1 * 1
+    # 1 * 1
+    # 1
+    #multiply (1..n).to_a
+  end
 end
