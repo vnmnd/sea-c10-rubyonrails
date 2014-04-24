@@ -1,7 +1,7 @@
 (1..100).each do |i|
-  if i % 15 == 0
+  if i % 5 == 0 && i % 3 == 0 
     puts "FizzBuzz"
-  elsif i % 5 == 0
+  elsif (i % 5).zero?
     puts "Buzz"
   elsif i % 3 == 0 
     puts "Fizz"

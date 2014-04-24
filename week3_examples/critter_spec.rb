@@ -14,6 +14,7 @@ describe Critter do
   context "methods" do 
     # if you don't do a before block, "it" is just an  instance of the class being described:
     it { should respond_to(:noise) }
+    it { should respond_to(:play_dead)}
 
     # this is the same sort of test as line 16, but a more verbose syntax
     it "should have a smell method" do 
@@ -25,6 +26,7 @@ describe Critter do
   context "accessible attributes" do 
     its(:color) { should == "brown" }
     its(:mantra) { should == "Squeek squeekum squeek squeeker"} 
+    its(:food) { should == "critter chow"}
   end 
 
 end 
