@@ -1,28 +1,28 @@
 class Calculator
+  def sum(content)
+    total = 0
 
-  def sum numbers
-    numbers.inject(0, :+)
+    content.each do |number|
+      total += number
+    end
+
+    total
   end
 
-  def multiply *numbers
-    numbers.flatten.inject(:*)
+  def multiply(*numbers)
+    numbers = numbers.flatten
+    numbers[0] * numbers[1]
   end
 
-  def pow base, exp
-    base ** exp
-    multiply Array.new(exp, base)
+  def pow(x, y)
+    x ** y
   end
 
-  def fac n
-    return 1 if n.zero?
-    n.downto(1).inject(:*)
-    # n * fac(n-1)
-    # 5 * 4 * 3 * 2 * 1 * 1
-    # 4 * 3 * 2 * 1 * 1
-    # 3 * 2 * 1 * 1
-    # 2 * 1 * 1
-    # 1 * 1
-    # 1
-    #multiply (1..n).to_a
+  def fac(n)
+    if n == 0
+      1
+    else
+      n * fac(n - 1)
+    end
   end
 end
